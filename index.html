@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Click Event -->
+    <div id="container">
+        <h1>Event Tracker</h1>
+        <div class="content">
+
+            <h2>Click Event</h2>
+            <button class="btn" id="button1" onclick="clickMe()">Click me</button>
+            <div id="count">Click count: 0</div>
+        </div>
+        <!-- MOuse Event -->
+        <div class="content">
+
+            <h2>Mouse Event</h2>
+            <div class="box1" id="box">300 x 300</div>
+            <div id="result1">Mouse Position: (0,0)</div>
+        </div>
+        <!--Keyboard Event-->
+        <div class="content">
+
+            <h2>Keyboard Events</h2>
+            <input type="text" id="key" placeholder="Press any key" class="btn">
+            <div id="result2">Last key pressed: <span id="response">None</span></div>
+            <button onclick="reset()">Restart</button>
+</div>
+        </div>
+        <!-- Focus and Blur Event -->
+        <div class="content">
+
+            <h2>Focus and Blur Event</h2>
+        <input type="text" id="focus" onfocus="updateFocusStatus('Focused')" onblur="updateFocusStatus('not Focused')" placeholder="Focus and blur">
+        <div id="message-focus">Input is not focused</div>
+        </div>
+
+        <!-- Window Resize Event-->
+        <div class="content">
+
+            <h2>Window Resize Events</h2>
+            <div id="resize-message">Window Width: <span id="width#">0px</span>, Window Height <span id="height#">0px</span>
+            </div>
+        </div>
+
+    
+
+        <!-- Form Submit Event -->
+        <div class="content">
+            <h2>Form Submit Event</h2>
+            <form id="form">
+                <input type="text" id="formInput" placeholder="Type here to submit" class="btn">
+                <button class="btn" id="button2" onclick="handleSubmit()">Submit</button>
+            </form>
+            <p id="status">Form Status: Not Submitted </p>
+        </div>
+        <!-- Drag and Drop Event-->
+        <div class="content">
+            <h2>Drag and Drop Event</h2>
+            <div id="drag" draggable="true" ondragstart="handleDragStart()" ondragend="handleDragEnd()">
+                Drag Me!
+            </div>
+            <div id="dragStatus">Drag Status: Not Dragging</div>
+        </div>
+
+        <!-- Media Event-->
+        <div class="content">
+            <h2>Media Event</h2>
+            <video id="video" width="400" controls>
+                <source src="./Classic Coffee Cake Recipe Inspired by Bombay Bakery - Food Fusion (Eid Special Recipe).mp4" type="video/mp4"> 
+                
+            </video>
+            <div id="mediaStatus">Media Status: Stopped</div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
